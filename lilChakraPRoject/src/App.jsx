@@ -7,8 +7,25 @@ import {
 } from "./icons/sidebar-icons";
 import { Tooltip } from "./components/ui/tooltip";
 import "./App.css";
-import { Box, Center, Flex, IconButton, Stack ,Menu, Portal ,Button} from "@chakra-ui/react";
-import { MenuIcon } from "./icons/other-icons";
+import { Box, Center, Flex, IconButton, Stack ,Menu, Portal ,Button, HStack, Circle, Text, MenuSeparator, Switch} from "@chakra-ui/react";
+import { ChartIcon, ChatGPTMenuIcon, ChatGPTPlusIcon, CheckIcon, MenuIcon, TemporaryChatIcon } from "./icons/other-icons";
+
+function MenuItemDetail(props){
+  const {icon, title, description, element, ...rest} = props;
+  return(
+    <HStack w='100%' outline='1px solid blue'>
+      <Circle size='8' bg='bg.muted'>
+       {icon}
+      </Circle>
+      <Stack gap='0' flex='1'>
+        <Text>{title}</Text>    
+        <Text fontSize='xs' color='fg.muted'>{description}</Text>    
+      </Stack>
+      <Box>{element}</Box>
+    </HStack>
+  )
+}
+
 
 function App() {
   return (
@@ -50,8 +67,32 @@ function App() {
               <Portal>
                 <Menu.Positioner>
                   <Menu.Content>
-                    <Menu.Item value="new-txt">New Text File</Menu.Item>
- 
+                    <Menu.Item value="new-txt">
+                    <MenuItemDetail 
+                    icon ={<ChatGPTPlusIcon />}
+                    title='ChatGPT Plus' 
+                    description = 'Our smartest model & more' 
+                    element={<Button variant='outline' size='xs' borderRadius='full'>Upgrade</Button>}/>
+                       </Menu.Item>
+
+                  <Menu.Item value="new-txt">
+                    <MenuItemDetail 
+                    icon ={<ChatGPTMenuIcon />}
+                    title='ChatGPT' 
+                    description = 'Great for everyday tasks' 
+                    element={<ChartIcon />}/>
+                  </Menu.Item>   
+             
+             <MenuSeparator/>
+
+             <Menu.Item value="temporary-chat" py='2'>
+                    <MenuItemDetail 
+                    title='Temporary Chat' 
+                    icon ={<TemporaryChatIcon/>}
+                    element={<Switch size='sm'/>}/>
+              </Menu.Item>   
+             
+
                   </Menu.Content>
                 </Menu.Positioner>
               </Portal>
