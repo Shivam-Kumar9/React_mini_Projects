@@ -1,0 +1,39 @@
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.section{
+  background: rgb(240, 238, 238);
+  padding: 25px;
+  border-radius:10px ;
+}
+
+.sub_part {
+   background-color: rgb(255, 255, 255);
+   padding: 15px;
+}
+
+.inp_label{
+   /* padding: 10px; */
+}
+input{
+  padding: 8px;
+}
+.userBtn{
+  padding: 15px;
+  display:  flex ;
+  gap: 20px;
+}
+
+button,input{
+  padding: 9px;
+  font-size: medium;
+  font-weight: 600;
+  border-radius: 4px;
+}
+button:first-child{
+  background-color: greenyellow;
+}
+button~button{
+  background-color: tomato;
+}
