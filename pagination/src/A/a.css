@@ -1,0 +1,35 @@
+ .card{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+   align-items: center;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+ }
+ img{
+  max-width: 200px;
+  
+ }
+ .Container{
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+ }
+
+ .paginaton{
+  margin: 15px;
+ }
+ .left_right , .page_num{
+  padding:8px 9px;
+  cursor: pointer;
+  margin: 5px;
+  border: 1px solid;
+  font-size: large;
+  /* font-weight: bold; */
+ }
+ .active{
+  background-color: aquamarine;
+ }
