@@ -1,0 +1,29 @@
+ .App{
+  font-family: sans-serif;
+  text-align: center;
+ }
+
+ .search-input{
+   width: 400px;
+   padding: 10px ;
+   font-size: larger;
+   font-weight: 700;
+ }
+
+ .results_box{
+  width: 400px;
+  margin: auto;
+  padding:10px;
+  border: 1px solid ;
+  text-align: left;
+  max-height: 400px;
+  overflow-y: scroll;
+ }
+
+ .result{
+  display: block;
+   padding: 5px;
+ }
+ .result:hover{
+   background-color: rgb(206, 232, 255);
+ }
