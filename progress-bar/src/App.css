@@ -1,0 +1,19 @@
+ *{
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+ }
+
+ .outer{
+ border: 1px solid;
+ border-radius: 10px;
+ overflow: hidden;
+ margin: 5px;
+ }
+
+ .inner{
+ background: #199e36;
+ color: white;
+ /* width: 50%; */
+ text-align: right;
+ transition: 1s ease-in;
+ }
