@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ 
+ dialog{
+    width: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border-radius: 5px;
+    transform: translate(-50%, -50%)
+ }
+ dialog>div{padding: 10px;}
+
+ dialog button{
+    background-color: rgb(0, 149, 255);
+    padding: 6px 20px;
+    margin: 10px 30%;
+    border: none;
+    border-radius: 5px;
+    color: aliceblue;
+    font-size: large;
+    font-weight: 700;
+ }
+
+  dialog button:hover{ background-color: rgb(130, 188, 255);}
+
+  dialog input {
+    outline: none;
+    border: none;
+    font-size: large;
+    border-bottom: 2px solid rgb(168, 168, 168) ;
+  }
+
+ .check_box{
+    margin-top: 10px;
+    display: flex;
+     align-items: center;
+ }
+
+modalNev{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px;
+}
+.dialogClose{
+    background-color: aliceblue;
+    padding: 5px;
+    border-radius: 9999px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 10% ;
+    flex-wrap: wrap;
+}
+
+/*------------------------   (div)  ---------------------------*/
+
+ 
+.card{
+    max-width: 50%;
+    padding: 5px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin:  10px auto;
+}
+.done{
+    color: rgb(126, 126, 126);
+    text-decoration: line-through;
+}
