@@ -13,8 +13,12 @@ const task_checkbox = document.querySelector(".checkbox-wrapper-10>input");
 
 const display = document.querySelector("section");
 
+const topbtn = document.querySelector(".top");
+ 
+
 debouncing(searchInput,render)
 addTaskModal(add_task, close, dialog, form, input_task, task_checkbox);
+throttling(topbtn)
 
 export function render(data) {
   display.innerHTML = "";
@@ -70,4 +74,3 @@ export function render(data) {
 }
 render();
 
- 
