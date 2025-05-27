@@ -1,6 +1,7 @@
 //index.js
 import { addTaskModal } from "./js/modal.js";
 import { debouncing } from "./js/debounc.js";
+import {throttling} from './js/throttling.js'
 const searchInput = document.querySelector(".searchInp");
 const add_task = document.querySelector(".add_task");
 

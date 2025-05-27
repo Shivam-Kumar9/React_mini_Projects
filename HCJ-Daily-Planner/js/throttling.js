@@ -1,6 +1,6 @@
 
 
-export function throttling(){
+export function throttling(topbtn){
 
 
     window.addEventListener('scroll',()=>{
