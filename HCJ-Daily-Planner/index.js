@@ -2,7 +2,6 @@
 import { addTaskModal } from "./js/modal.js";
 import { debouncing } from "./js/debounc.js";
 const searchInput = document.querySelector(".searchInp");
-const searchBtn = document.getElementsByClassName("searchBtn")[0];
 const add_task = document.querySelector(".add_task");
 
 const dialog = document.querySelector("dialog");
@@ -14,7 +13,7 @@ const task_checkbox = document.querySelector(".checkbox-wrapper-10>input");
 
 const display = document.querySelector("section");
 
-debouncing(searchInput,searchBtn,render)
+debouncing(searchInput,render)
 addTaskModal(add_task, close, dialog, form, input_task, task_checkbox);
 
 export function render(data) {

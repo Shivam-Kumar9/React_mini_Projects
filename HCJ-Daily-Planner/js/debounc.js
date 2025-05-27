@@ -1,5 +1,5 @@
 //searh debounce
-export function debouncing(searchInput, searchBtn, render) {
+export function debouncing(searchInput, render) {
    
 
    
@@ -7,9 +7,11 @@ export function debouncing(searchInput, searchBtn, render) {
     
      function debounce(fun,delay){
         let timerid
-        return function(...arg){
+        return function( arg){
+            if(timerid) clearTimeout(timerid)
             timerid = setTimeout(()=>{
-                fun(...arg)
+                fun(arg)
+                console.log(Date.now())
             },delay)
         }
      }
@@ -19,7 +21,7 @@ export function debouncing(searchInput, searchBtn, render) {
         render(serchedQ)
      } 
      
-     let  linking = debounce(main,400)
+     let  linking = debounce(main,500)
 
 
     searchInput.addEventListener("keyup", e => {
