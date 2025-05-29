@@ -19,8 +19,8 @@
       <nav style="background-color: antiquewhite;">
 
         <div>
-          <input  type="text" class="searchInp" placeholder="Search tasks" />
-          
+          <input  type="text" class="searchInp" placeholder="🔍 Search tasks" />
+           <button  class="clear">All clear</button>
         </div>
        
         <button class="add_task">Add Tasks</button>
@@ -50,6 +50,15 @@
                   <label class="tgl-btn" data-tg-off="Nope" data-tg-on="Yeah!" for="cb5"></label>
                 </div> 
               </label> 
+               
+              <label for="tag"> Categories : 
+                <select name="" id="category">
+                  <option selected disabled>--Chose one--</option>
+                  <option value="personal">Personal</option>
+                  <option value="work">Work</option>
+                  <option value="study">study</option>
+                </select>
+              </label>
 
               <button>Submit</button>
             </form>
@@ -58,12 +67,15 @@
 
       </nav>
  
-      <section></section>
+      <section>
+        <!-- here card will be appended  -->
+      </section>
     </main>
 
     <!-- footer start here  -->
 
     <footer>
+       
         <button class="top">🔝</button>
     </footer>
   </body>

@@ -1,101 +1,233 @@
-*{
+* {
     padding: 0;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
  
- dialog{
+    .add_task{
+    background: rgb(37, 160, 0);
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    font-weight: 700;
+    border-radius: 4px;
+}
+.add_task:hover{
+    background: #08ff31;
+background: radial-gradient(circle, rgba(8, 255, 49, 1) 0%, rgba(63, 89, 69, 1) 100%);
+    color: rgb(255, 255, 255);
+}
+input[placeholder*='Search']{
+     padding: 5px;
+     font-size: medium;
+    border-radius: 9px;
+     /* border-top-left-radius: 99px;
+     border-bottom-left-radius:99px ; */
+     outline: none;
+     border: none;
+     border-bottom: 2px solid ;
+}
+
+dialog {
     width: 300px;
     position: fixed;
     top: 50%;
     left: 50%;
     border-radius: 5px;
     transform: translate(-50%, -50%)
- }
- dialog>div{padding: 10px;}
+}
 
- dialog button{
-    background-color: rgb(0, 149, 255);
+dialog>div {
+    padding: 10px;
+}
+
+dialog button {
+    background-color: rgb(220, 236, 255);
+    color: rgb(0, 149, 255);
     padding: 6px 20px;
     margin: 10px 30%;
     border: none;
     border-radius: 5px;
-    color: aliceblue;
     font-size: large;
     font-weight: 700;
- }
+}
 
-  dialog button:hover{ background-color: rgb(130, 188, 255);}
+dialog button:hover {
+    color: aliceblue;
+    background-color: rgb(91, 185, 252);
+}
 
-  dialog input {
+dialog input {
     outline: none;
     border: none;
     font-size: large;
-    border-bottom: 2px solid rgb(168, 168, 168) ;
-  }
+    border-bottom: 2px solid rgb(168, 168, 168);
+}
 
- .check_box{
+.check_box {
     margin-top: 10px;
     display: flex;
-     align-items: center;
- }
+    align-items: center;
+}
 
-modalNev{
+modalNev {
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin: 10px;
 }
-.dialogClose{
+
+.dialogClose {
     background-color: aliceblue;
     padding: 5px;
     border-radius: 9999px;
 }
 
-nav{
+nav {
     display: flex;
     justify-content: space-around;
-    padding: 20px 10% ;
+    padding: 20px 10%;
     flex-wrap: wrap;
-   position: sticky;
-   top: 0;
+    position: sticky;
+    gap: 10px;
+    top: 0;
 }
 
 /*------------------------   (div)  ---------------------------*/
-
+section{
+        display: grid;
+       grid-template-columns: repeat(3,1fr);
+}
  
-.card{
-    max-width: 50%;
+.task_div h3{
+    overflow-wrap:break-word;
+}
+.card {
+    min-width: 70%;
+    max-width: 70%;
+    height: auto;
     padding: 5px;
     background-color: aliceblue;
     border-radius: 10px;
     padding: 10px;
     text-align: center;
-    margin:  10px auto;
+    margin: 10px auto;
+    overflow: hidden;
+    display: flex;
+    /* align-items: end; */
+    justify-content: space-between;
+    flex-direction: column;
 }
-.done{
+
+
+.task_info {
+   background: #adfeff;
+background: linear-gradient(0deg, rgba(173, 254, 255, 1) 0%, rgba(255, 240, 209, 1) 100%);
+    border-radius: 10px;
+    padding: 5px;
+    text-align: left;
+}
+
+.tag_status_div {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.tag_box {
+  background: #6eeeff;
+background: radial-gradient(circle, rgba(110, 238, 255, 1) 0%, rgba(109, 176, 252, 1) 100%);    border-radius: 5px;
+    padding: 0 2px;
+    font-size: smaller;
+    color: rgb(255, 255, 255);
+    width: fit-content;
+}
+
+.remove_btn {
+    border: none;
+    background: #f34848;
+    padding: 2px 8px;
+    border-top-left-radius: 99px;
+    border-bottom-right-radius: 99px;
+    color: white;
+    font-weight: 600;
+}
+
+.remove_btn:hover {
+    background: #ffffff;
+    color: #f34848;
+}
+
+
+.done {
     color: rgb(126, 126, 126);
     text-decoration: line-through;
 }
 
 
-.top{
+.top {
     font-size: x-large;
     border-radius: 99px;
     height: 40px;
     width: 40px;
     border: none;
-    position:fixed;
+    position: fixed;
     top: 85%;
     left: 80%;
     display: none;
     background-color: rgb(248, 138, 4);
 }
-.top:hover{
-    background-color: rgb(141, 173, 250);
- }
 
-.visible{
+.top:hover {
+    background-color: rgb(141, 173, 250);
+}
+
+.visible {
     display: block;
 }
+.vanish {
+    display:none
+}
+
+
+
+/* foooter */
+.clear {  
+    padding: 8px 15px; 
+    font-size: 0.9rem;  
+    border-radius: 5px;  
+    border: none;
+    background-color: #dc3545; 
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;  
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.clear:hover {
+    background-color: #c82333;  
+    transform: translateY(-1px);  
+}
+
+.clear:active {
+    background-color: #bd2130;  
+    transform: translateY(0);
+}
+/* footer */
+
+@media  (max-width : 800px){
+     section{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+}
+}
+
+@media  (max-width : 400px){
+ 
+
+     section{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+}
+}
+

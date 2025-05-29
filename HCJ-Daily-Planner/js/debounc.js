@@ -11,7 +11,7 @@ export function debouncing(searchInput, render) {
             if(timerid) clearTimeout(timerid)
             timerid = setTimeout(()=>{
                 fun(arg)
-                console.log(Date.now())
+                console.log('500ms debouning'+Date.now())
             },delay)
         }
      }
