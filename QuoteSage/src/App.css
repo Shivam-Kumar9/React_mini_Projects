@@ -250,7 +250,6 @@
   transform: none;
 }
 
-
 .spinner {
   width:  1.25rem;
   height: 1.25rem;
@@ -264,5 +263,45 @@
   to { transform:  rotate(360deg);}
 }
  
+.like-button{
+  margin: 0 auto;
+  background: none;
+  border : none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  transition:  all 0.3s  ease;
+  display : flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+ .like-button.liked{
+  animation: bounce 0.6s ease;
+ }
+ @keyframes bounce {
+   0%, 100% { transform: scale(1) ;}
+   50% {transform: scale(1.2);}
+ }
 
+  .like-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+    transition: all 0.3s ease;
+  } 
+
+  .light .like-button {
+    color: #757575;
+  }
+
+  .light .like-button.liked {
+    color: #e91e63;
+  }
+
+  .dark .like-button{
+    color: #bdbdbd;
+  }
  
+  .dark .like-button.liked {
+    color: #ff4081;
+  }

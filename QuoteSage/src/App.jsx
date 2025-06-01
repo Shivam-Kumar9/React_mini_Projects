@@ -7,7 +7,7 @@ import useFetchQuote from './hook/FetchQuote'
 import ThemeBtn from './components/Theme'
 
 function App() {
-  const [storeQuote, getQuote , loading ,error] = useFetchQuote()
+  const [handleLike,isLiked,likesCount, storeQuote, getQuote , loading ,error] = useFetchQuote()
   //  console.log(storeQuote)
   // console.log(error)
   const [theme,setTheme ] = useState(()=>{
@@ -15,8 +15,7 @@ function App() {
     return savedtheme 
   })
   
-
-  const toggleTheme = ()=>{
+const toggleTheme = ()=>{
     let newtheme = theme === 'dark'? 'light' : 'dark' 
     setTheme(newtheme)
     localStorage.setItem('theme',newtheme)
@@ -34,8 +33,9 @@ function App() {
             <p>~ A Daily Quote Generator</p>
           </div>
        </div>
+       
       <ThemeBtn toggleTheme={toggleTheme} theme={theme}/>  
-      <QuoteCard  data={storeQuote} error={error} />
+      <QuoteCard  data={storeQuote} error={error} likeSection = {{likesCount,isLiked ,handleLike}}/>
       <QuoteButton getQuote={getQuote}  loading={loading}/>
     </div>
   )

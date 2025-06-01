@@ -1,6 +1,6 @@
-import React from "react";
 import "../App.css";
-function QuoteCard({ data, error }) {
+import { LikeButton } from './LikeBtn'
+function QuoteCard({ data, error,likeSection }) {
   // const [{a,h ,q}] = data || [{a:'no',h:'h',q:'j'}]  not work beacuse [] alwasy true
   if (!data || data.length === 0) {
     return (
@@ -8,13 +8,16 @@ function QuoteCard({ data, error }) {
         <div className="skeleton_line" style={{ width: "75%" }}></div>
         <div className="skeleton_text"></div>
         <div className="skeleton_line" style={{ width: "50%" }}></div>
+
       </div>
     );
   }
 
   let quote = data?.[0] ?? {};
   let { a, q, h } = quote;
-  console.log(q ,Date.now());
+  const { likesCount, isLiked, handleLike } = likeSection;
+
+  // console.log(q ,Date.now());
   return (
     <>
       {error && <div className="error-message">{error}</div>}
@@ -30,6 +33,12 @@ function QuoteCard({ data, error }) {
               dangerouslySetInnerHTML={{ __html: h }}
             />
           )} */}
+            <hr style={{width:'25%',margin:'10px auto',color:'red'} } />
+           
+             <LikeButton 
+                       liked={isLiked} 
+                  onToggle={handleLike} 
+                   likeCount={likesCount} />
         </div>
       )}
     </>
