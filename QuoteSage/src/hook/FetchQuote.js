@@ -1,4 +1,4 @@
-import { useState ,useEffect } from "react";
+import { useState } from "react";
 import  axios from 'axios'
 
 function useFetchQuote() {
@@ -33,8 +33,8 @@ function useFetchQuote() {
        } else {
         throw new Error('No quest data received')
       }
-    } catch (error) {
-      // console.log(`we found this error:--`, error);
+    } catch (_error) {
+      // console.log(`we found this error:--`, _error);
       setError('Failed to fetch quote. Please try again.')
     }
     finally{
