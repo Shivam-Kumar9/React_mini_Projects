@@ -18,6 +18,7 @@ export function debouncing(searchInput, render) {
     
      function main(value){
         let serchedQ  = data.filter(ele=> ele.task.toLowerCase().includes(value.toLowerCase()) )
+        console.log(serchedQ);
         render(serchedQ)
      } 
      
