@@ -1,4 +1,4 @@
- /* *{
+ *{
   text-align: center;
   font-family: 'Courier New', Courier, monospace;
  }
@@ -13,7 +13,7 @@
  .inner{
  background: #199e36;
  color: white;
- width: 50%;
+ /* width: 50%; */
  text-align: right;
  transition: 1s ease-in;
- } */
+ }

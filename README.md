@@ -1,3 +1,7 @@
+21 projects
+create vite@latest react-21projects
+
+
 # React_mini_Projects
 This repo holds coding round problems , mini apps  or mini assignments 
 
@@ -22,4 +26,5 @@ Add price movement indicators (🔼🔽).
 
 
      var url htps://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=IBM&interval=5min&apikey=${AS6ROL3QJEB14ZFV}`;
+
 

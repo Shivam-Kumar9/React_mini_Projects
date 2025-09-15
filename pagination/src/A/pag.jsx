@@ -21,6 +21,8 @@ const goToNextPage =()=>{
       >
         ⬅️
       </button>
+
+
       {[...Array(NoOfPages).keys()].map((n) => (
         <span
           className={"page_num" + (n === currentPage ? " active" : "")}
@@ -30,6 +32,8 @@ const goToNextPage =()=>{
           {n}
         </span>
       ))}
+
+
       <button
         disabled={currentPage >= NoOfPages - 1}
         onClick={() => goToNextPage()}

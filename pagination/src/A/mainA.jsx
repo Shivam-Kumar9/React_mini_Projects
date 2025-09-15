@@ -21,21 +21,21 @@ const NoOfPages = Math.ceil(totalProduct/Page_Limit);
 const  start = currentPage * Page_Limit;
 const  end  = start + Page_Limit;
 
-const  handlePageChange = (n)=>{
-   setCurrentPage(n)
-}
-const goToPrevPage =()=>{
-    setCurrentPage(prev=> prev - 1)
-}
-const goToNextPage =()=>{
-    setCurrentPage(prev=> prev + 1)
-}
+// const  handlePageChange = (n)=>{
+//    setCurrentPage(n)
+// }
+// const goToPrevPage =()=>{
+//     setCurrentPage(prev=> prev - 1)
+// }
+// const goToNextPage =()=>{
+//     setCurrentPage(prev=> prev + 1)
+// }
   return (
     <><h3>{JSON.stringify(NoOfPages)}</h3>
   
         <Pagination currentPage={currentPage} NoOfPages={NoOfPages} setCurrentPage={setCurrentPage} />
     {
-        !data.length 
+        !data.length
            ? <h1>No Products</h1> 
            : <div className='Container'>
             {data.slice(start,end).map(item =>{
