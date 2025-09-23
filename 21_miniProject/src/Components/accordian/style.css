@@ -10,7 +10,16 @@
     justify-content: center;
     align-items: center;
     /* color: white; */
+    gap: 20px;
 }  
+.wrapper button{
+ padding: 10px 20px;   
+ background:#614101 ;
+ color: #fff;
+ font-weight: bold;
+ font-size: 20px;
+ cursor:  ;
+}
 
 .accordian{
     width: 500px;
