@@ -1,5 +1,16 @@
 
 .active{
-    color: rgb(62, 137, 193);
-    text-shadow: black;
+    color:#ffea00;
+    cursor: pointer;
+
+}
+.active:hover{
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+    color: orange;
+} 
+
+
+.inactive{
+    color: rgb(220, 214, 214);
 }
