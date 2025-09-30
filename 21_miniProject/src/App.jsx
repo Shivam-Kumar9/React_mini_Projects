@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Accordian from './Components/accordian'
 import RandomColor from './Components/random_color'
+import StarRating from './Components/star_rating'
 
 function App() {
  
@@ -12,7 +13,10 @@ function App() {
        {/* <Accordian/> */}
 
        {/* color change  */}
-       <RandomColor/>
+       {/* <RandomColor/> */}
+
+       {/* rating star */}
+       <StarRating/>
     </>
   )
 }
