@@ -28,6 +28,17 @@ export default function ImageSlider({ url, limit }) {
     if (url !== "") fetchImage(url);
   }, [url]);
 
+  const handleNext = () => {
+    setCurrentSlide((prev) =>
+      currentSlide === image.length - 1 ? 0 : (prev += 1)
+    );
+  };
+  const handlePrev = () => {
+    setCurrentSlide((prev) =>
+      currentSlide <= 0 ? image.length - 1 : (prev -= 1)
+    );
+  };
+  console.log(currentSlide);
   if (loading) {
     return <h1>Loading data ! Please wait</h1>;
   }
@@ -38,23 +49,33 @@ export default function ImageSlider({ url, limit }) {
 
   return (
     <div className="container">
-      <BsArrowLeftCircleFill className="arrow arrow_left" />
+      <BsArrowLeftCircleFill
+        onClick={handlePrev}
+        className="arrow arrow_left"
+      />
       {image.length && image
         ? image.map((img, i) => (
             <img
               src={img.download_url}
               alt="img"
               key={i}
-              className="current_image"
+              className={ i === currentSlide ? "current_image" : "current_image  hide_current_image" }
             />
           ))
         : null}
 
-      <BsArrowRightCircleFill className="arrow arrow-right" />
-      <span className="circle-indicators">
+      <BsArrowRightCircleFill
+        onClick={handleNext}
+        className="arrow arrow_right"
+      />
+      <span className="circle_indicators">
         {image && image.length
           ? image.map((_, index) => (
-              <button key={index} className="current_indicator">_</button>
+              <button key={index} 
+              onClick={()=>setCurrentSlide(index)}
+              className={ index === currentSlide ? 'current_indicator' : 'current_indicator  inactive_indicator' }>
+                
+              </button>
             ))
           : null}
       </span>
