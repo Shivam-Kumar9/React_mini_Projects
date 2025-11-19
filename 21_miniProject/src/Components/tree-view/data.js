@@ -48,20 +48,5 @@
 
 
 
-export default Menu;
+export default Menu;  
 
-
-
-
-
-
-
-// export const sideMenu =[
-//     {
-//         label:"Home",
-//         to : '/',
-//     },
-//     {
-//         label:''
-//     }
-// ]
