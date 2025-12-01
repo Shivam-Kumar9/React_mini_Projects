@@ -1,7 +1,6 @@
 import TreeItem from "./treeItem";
 
 
- 
 function TreeList({list =[]}) {
     console.log("treeList",list);
   return (<div>
