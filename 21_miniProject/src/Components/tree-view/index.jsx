@@ -1,10 +1,10 @@
 import TreeItem from './treeItem';
-
+import './style.css'
  
 
 export default  function TreeView({menu =[] }){
-//   console.log(menu); 
-    return <div className='main_menu'>
+//   console.log(menu);
+    return <div className='tree_view'>
          {/* {JSON.stringify(menu)} */}
         {
             menu.length > 0 ? 
