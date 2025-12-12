@@ -11,8 +11,9 @@ function TreeItem({item}) {
         let  newShowchildren = { ...showChildren, [label] : !showChildren[label]}
       setShowChildren( newShowchildren)
     }
-        
+
     console.log(showChildren);
+    
     return( 
         <li >
             <div className="menu_item">
