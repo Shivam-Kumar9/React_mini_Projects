@@ -37,7 +37,7 @@ function App() {
        {/* <QRcode/> */}
 
        {/* Theme light -- dark */}
-       <LightDarkMode/>
+       {/* <LightDarkMode/> */}
     </>
   )
 }
