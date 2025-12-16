@@ -1,9 +1,1 @@
-import './scroll.css'
 
-export default function ScrollIndicator() {
-    return (
-        <div className="scroll-indicator">
-            <div className="scroll-bar" id="scroll-bar"></div>
-        </div>
-    )
-}

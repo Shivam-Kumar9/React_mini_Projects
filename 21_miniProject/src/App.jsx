@@ -9,6 +9,7 @@ import TreeView from './Components/tree-view'
 import Menu from './Components/tree-view/data'
 import QRcode from './Components/qr_code_generator/QRcode'
 import LightDarkMode from './Components/light_dark_mode'
+import ScrollIndicator from './Components/scroll_indicator'
 
 function App() {
  
@@ -38,6 +39,9 @@ function App() {
 
        {/* Theme light -- dark */}
        {/* <LightDarkMode/> */}
+
+       {/* scroll indicator */}
+       <ScrollIndicator url={`https://dummyjson.com/products?limit=200`}/>
     </>
   )
 }
