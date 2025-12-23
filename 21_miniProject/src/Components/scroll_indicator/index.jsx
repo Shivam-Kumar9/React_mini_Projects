@@ -1,5 +1,5 @@
-import './scroll.css'
-import React, { useState, useEffect } from 'react';
+import './scroll.css';
+import  { useState, useEffect } from 'react';
 import fake from './deta';
 export default function ScrollIndicator({url}){
     const [data, setData] = useState([])
@@ -13,11 +13,12 @@ export default function ScrollIndicator({url}){
           const data = await response.json()
           console.log(data.products)
            if( data && data.products && data.products.length >0) setData(data.products)
-       } catch (e) {
-        console.log('hi',e);
-        setError(e.message)
        }
-      finally { setLoading(false)}
+       catch(e){
+        console.log('hi',e);
+        setError(e.message);
+       }
+      finally { setLoading(false);}
     }
 
     const handleScroll =()=>{
@@ -28,8 +29,10 @@ export default function ScrollIndicator({url}){
          const actualHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         // clintHeight -> height of the view port  ---- scrollHeight --total scroll content on web
          const howMuchScrolled = document.documentElement.scrollTop || document.body.scrollTop
-         setHowMuchScrollPercent((actualHeight/howMuchScrolled)*100)
+         setHowMuchScrollPercent((howMuchScrolled/actualHeight)*100)
      }
+
+     console.log(howMuchScrollPercent);
      useEffect(()=>{fetchData(url)},[url]) 
      useEffect(()=>{
        window.addEventListener('scroll', handleScroll)
@@ -41,14 +44,21 @@ export default function ScrollIndicator({url}){
 
     return (
         <div className="">
-            <h1>Custom Scroll indicator</h1>
-            <div className="data_container">
-                {data && data.length >0 ? data.map(dataItem => <p key={dataItem.id}>{dataItem.title}</p> 
-                                       ): null }
-                 { /* {dummy data} */
-                  //  fake.map((ele,i)=><p key={i}>{ele.title}</p>) 
-                  }
+            <div className='top_container'>
+                <h1>Custom Scroll indicator</h1>
+            <div className='scroll_progress_tracking_container'>
+            <div className='current_progress_bar' 
+             style={{width : `${howMuchScrollPercent}%`}}></div>
             </div>
-         </div>
-    )
+            </div>
+            
+            <div className="data_container">
+                {data && data.length >0 ? data.map(dataItem => <p key={dataItem.id}>{dataItem.title}</p>) 
+                                       : null }
+                 {
+                    /*  {dummy data}  */
+                   fake.map((ele,i)=><p key={i}>{ele.title}</p>)
+                 }
+            </div>
+        </div>)
 }
