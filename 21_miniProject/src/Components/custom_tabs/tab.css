@@ -1,0 +1,36 @@
+*{
+    /* border: 1px dashed; */
+}
+.tab_wrapper{
+    padding: 10px;
+    text-align: center;
+}
+
+.tab_head{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.tab_title {
+    display: inline-flex;
+    font-size: 30px;
+    font-weight: bold;
+    align-items: center;
+    border: none;
+    color: #fff;
+    background-color: #4e016a;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+
+.tab_title.activeTab{ 
+    background-color : rgb(50, 156, 21);
+    border-color: black;
+    transition:  0.5s;
+}
+
+.tab_content{
+ padding: 20px 10px;
+ 
+}
