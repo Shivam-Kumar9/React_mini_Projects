@@ -24,13 +24,13 @@
     padding: 10px 15px;
 }
 
-.tab_title.activeTab{ 
+.tab_title.activeTab{
     background-color : rgb(50, 156, 21);
     border-color: black;
     transition:  0.5s;
+    
 }
 
 .tab_content{
  padding: 20px 10px;
- 
 }

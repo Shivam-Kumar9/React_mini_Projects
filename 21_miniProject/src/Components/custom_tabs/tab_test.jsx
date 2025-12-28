@@ -1,5 +1,5 @@
 import Tabs from "./tab"
- 
+
 function Random(){
     return <h1>Sab badiya ?merry x masts</h1>
 }
