@@ -12,6 +12,7 @@ import './App.css'
 // import ScrollIndicator from './Components/scroll_indicator'
 // import TabTest from './Components/custom_tabs/tab_test'
 import Modal_test from './Components/modal/modal_test'
+import GithubProfileFinder from './Components/github_profile_finder'
 
 function App() {
  
@@ -49,7 +50,10 @@ function App() {
        {/* <TabTest /> */}
 
        {/* custom modal */}
-       <Modal_test/>
+       {/* <Modal_test/> */}
+
+       {/* github profile finder */}
+       <GithubProfileFinder/>
     </>
   )
 }
