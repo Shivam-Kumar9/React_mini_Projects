@@ -13,6 +13,7 @@ import './App.css'
 // import TabTest from './Components/custom_tabs/tab_test'
 import Modal_test from './Components/modal/modal_test'
 import GithubProfileFinder from './Components/github_profile_finder'
+import SearchAutoComplete from './Components/search_autoComplete'
 
 function App() {
  
@@ -53,7 +54,10 @@ function App() {
        {/* <Modal_test/> */}
 
        {/* github profile finder */}
-       <GithubProfileFinder/>
+       {/* <GithubProfileFinder/> */}
+
+       {/* SearchAutoComplete */}
+       <SearchAutoComplete/>
     </>
   )
 }
