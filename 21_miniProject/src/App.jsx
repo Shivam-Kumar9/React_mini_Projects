@@ -14,6 +14,7 @@ import './App.css'
 import Modal_test from './Components/modal/modal_test'
 import GithubProfileFinder from './Components/github_profile_finder'
 import SearchAutoComplete from './Components/search_autoComplete'
+import TicTactToe from './Components/tic_tact_toe'
 
 function App() {
  
@@ -57,7 +58,10 @@ function App() {
        {/* <GithubProfileFinder/> */}
 
        {/* SearchAutoComplete */}
-       <SearchAutoComplete/>
+       {/* <SearchAutoComplete/> */}
+
+       {/* Tic Tac Toe */}
+       <TicTactToe/>
     </>
   )
 }

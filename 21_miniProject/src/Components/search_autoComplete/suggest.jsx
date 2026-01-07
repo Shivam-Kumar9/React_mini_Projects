@@ -7,8 +7,8 @@ function Suggest({data , setSuggest , setDropdown}) {
     setSuggest(e.target.innerText);
     setDropdown(false);
   }
-  return (
-    <ul> 
+  return ( 
+    <ul>
       {data && data.length >0 ? 
        data.map((list,i) =>
          <li key={i} onClick={handleSuggest}>
