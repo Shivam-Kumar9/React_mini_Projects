@@ -17,6 +17,9 @@ import SearchAutoComplete from './Components/search_autoComplete'
 import TicTactToe from './Components/tic_tact_toe'
 import FeatureFlagGlobalState from './Components/feature_flag/context/flag.context'
 import FeatureFlags from './Components/feature_flag'
+import Test_custom_hook from './Components/custom_hook/use_fetch/test'
+import UseClickOutsideTest from './Components/custom_hook/on_click_outside/test'
+import UseWindowResizeTEST from './Components/custom_hook/use_window_click/test.'
 
 function App() {
  
@@ -66,9 +69,14 @@ function App() {
        {/* <TicTactToe/> */}
 
        {/* feature flag */}
-      <FeatureFlagGlobalState>
-        <FeatureFlags/>
-      </FeatureFlagGlobalState>
+       {/* <FeatureFlagGlobalState>
+               <FeatureFlags/>
+           </FeatureFlagGlobalState> */}
+
+       {/* Custom hook */}
+       {/* <Test_custom_hook/> */}
+         {/* <UseClickOutsideTest/> */}
+         <UseWindowResizeTEST/>
     </>
   )
 }
