@@ -20,6 +20,7 @@ import FeatureFlags from './Components/feature_flag'
 import Test_custom_hook from './Components/custom_hook/use_fetch/test'
 import UseClickOutsideTest from './Components/custom_hook/on_click_outside/test'
 import UseWindowResizeTEST from './Components/custom_hook/use_window_click/test.'
+import ScrollTo_TopBottom from './Components/scroll_to_top'
 
 function App() {
  
@@ -69,14 +70,17 @@ function App() {
        {/* <TicTactToe/> */}
 
        {/* feature flag */}
-       {/* <FeatureFlagGlobalState>
+           {/* <FeatureFlagGlobalState>
                <FeatureFlags/>
            </FeatureFlagGlobalState> */}
 
        {/* Custom hook */}
-       {/* <Test_custom_hook/> */}
+         {/* <Test_custom_hook/> */}
          {/* <UseClickOutsideTest/> */}
-         <UseWindowResizeTEST/>
+         {/* <UseWindowResizeTEST/> */}
+
+       {/* ScrollTo_TopBottom */}
+       <ScrollTo_TopBottom />
     </>
   )
 }
