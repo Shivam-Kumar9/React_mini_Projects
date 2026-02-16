@@ -21,6 +21,7 @@ import Test_custom_hook from './Components/custom_hook/use_fetch/test'
 import UseClickOutsideTest from './Components/custom_hook/on_click_outside/test'
 import UseWindowResizeTEST from './Components/custom_hook/use_window_click/test.'
 import ScrollTo_TopBottom from './Components/scroll_to_top'
+import ScrollTo_Section from './Components/scroll_to_section/scroll_to_section'
 
 function App() {
  
@@ -80,7 +81,10 @@ function App() {
          {/* <UseWindowResizeTEST/> */}
 
        {/* ScrollTo_TopBottom */}
-       <ScrollTo_TopBottom />
+       {/* <ScrollTo_TopBottom /> */}
+
+       {/* specific section scroll */}
+       <ScrollTo_Section/>
     </>
   )
 }

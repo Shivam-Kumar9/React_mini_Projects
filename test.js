@@ -8,6 +8,9 @@
 // let ob = {...obj, [a] :!obj[a]}
 
 // console.log(ob,'123');
-let str = "sentence?";
+// let str = "sentence?";
 // Pehla 'the' dhundne ke baad, doosra dhundne ke liye:
-console.log(str.indexOf("en"));
+// console.log(str.indexOf("en"));]]
+
+console.log([]+[]);
+
