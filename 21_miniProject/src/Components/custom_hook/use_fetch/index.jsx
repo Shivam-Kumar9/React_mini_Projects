@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 
-
 export default function useFetch(url, option ={}){
-
+    
     const [data,setData] = useState(null)
     const [pending, setPending] = useState(false)
     const [error ,setError]  = useState(null)
@@ -13,7 +12,7 @@ export default function useFetch(url, option ={}){
             const response = await fetch(link)
             if(!response.ok) new Error('Server or URL error occured')
             const result = await response.json()
-            setData(result) 
+            setData(result)
 
         } catch (e) {
              setError(`${e} , Some error found`)
@@ -22,7 +21,7 @@ export default function useFetch(url, option ={}){
             setPending(false)
         }
 
-        }
+    }
 
     useEffect(()=>{
     fetchData(url)

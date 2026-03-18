@@ -1,3 +1,6 @@
+Move up one folder	   ------  cd ..
+Move up two folders	---------   cd ../..
+Enter a specific folder	----------cd folder_name
 21 projects
 create vite@latest react-21projects
 
