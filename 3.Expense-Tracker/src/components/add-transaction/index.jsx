@@ -1,37 +1,84 @@
+import { GlobalContext } from "../../context";
 import {
-  Dialog,
+  DialogRoot,
+  DialogBackdrop,
+  DialogContent,
+  DialogHeader,
+  DialogCloseTrigger,
+  DialogBody,
+  DialogFooter,
   Button,
   Input,
   RadioGroup,
+  Stack
 } from "@chakra-ui/react";
+import { useContext } from "react";
+ 
+
 
 export default function TransactionForm({ onClose, isOpen }) {
-  return (
-    <Dialog.Root
-      open={isOpen}
+   
+  const {formData, setFormData, value, setValue , handleFormSubmit} = useContext(GlobalContext)
+  
+  function handleFormChange(e){
+    setFormData( {
+      ...formData,
+      [e.target.name] : e.target.value
+    })
+  }
+  function handleSubmit(e){
+    e.preventDefault()
+    handleFormSubmit(formData)
+  }
+
+  return ( 
+    <DialogRoot
+      open={isOpen} 
       onOpenChange={(details) => {
         if (!details.open) onClose();
       }}
     >
-      <Dialog.Backdrop />
+      <DialogBackdrop />
 
-      <Dialog.Content>
-        <form>
-          <Dialog.Header>Add New Transaction</Dialog.Header>
-          <Dialog.CloseTrigger />
+      <DialogContent>
+        <form onSubmit={handleSubmit}>
+          <DialogHeader>Add New Transaction</DialogHeader>
+          <DialogCloseTrigger />
 
-          <Dialog.Body>
+          <DialogBody>
             <div>
-              <label>Description</label>
-              <Input name="description" />
+              <label>Enter Description</label>
+              <Input onChange={handleFormChange} name="description"  placeholder="Enter Description"/>
             </div>
 
             <div>
-              <label>Amount</label>
-              <Input name="amount" type="number" />
+              <label>Enter Amount</label>
+              <Input onChange={handleFormChange} name="amount" type="number" placeholder='Enter Amount'/>
             </div>
 
-            <RadioGroup defaultValue="income">
+
+
+            <div>
+              <label>Transaction Type</label>
+<RadioGroup.Root defaultValue="expense" value={formData.type} onValueChange={(e) => setFormData({...formData, type: e.value})} mt={'5'}>
+  <Stack direction="row" gap="4" >
+    
+    <RadioGroup.Item value="income">
+      <RadioGroup.ItemHiddenInput />
+      <RadioGroup.ItemControl/> 
+      <RadioGroup.ItemText> Income</RadioGroup.ItemText>
+    </RadioGroup.Item>
+
+    <RadioGroup.Item value="expense">
+      <RadioGroup.ItemHiddenInput />
+      <RadioGroup.ItemControl/> 
+      <RadioGroup.ItemText> Expense</RadioGroup.ItemText>
+    </RadioGroup.Item>
+
+  </Stack>
+</RadioGroup.Root>
+            </div>
+            {/* <RadioGroup defaultValue="income">
               <RadioGroup.Item value="income">
                 <RadioGroup.ItemHiddenInput />
                 <RadioGroup.ItemIndicator />
@@ -43,21 +90,22 @@ export default function TransactionForm({ onClose, isOpen }) {
                 <RadioGroup.ItemIndicator />
                 <RadioGroup.ItemText>Expense</RadioGroup.ItemText>
               </RadioGroup.Item>
-            </RadioGroup>
-          </Dialog.Body>
+            </RadioGroup> */}
+          </DialogBody>
 
-          <Dialog.Footer>
+          <DialogFooter>
             <Button onClick={onClose} type="button">
               Cancel
             </Button>
-            <Button type="button">Add</Button>
-          </Dialog.Footer>
+            <Button onClick={onClose} type="submit">Add</Button>
+          </DialogFooter>
         </form>
-      </Dialog.Content>
-    </Dialog.Root>
+      </DialogContent>
+    </DialogRoot>
   );
 }
 
+ 
 
 
 // import {
